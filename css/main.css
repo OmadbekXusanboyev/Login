@@ -1,0 +1,312 @@
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     text-decoration: none;
+     list-style: none;
+}
+.container{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-direction: column;
+     min-height: 100vh;
+}
+.modal{
+     position: fixed;
+     top: -100%;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background-color: rgba(0, 0, 0, 0.5);
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     backdrop-filter: blur(3px);
+     transition: all .6s ease-in-out;
+}
+.modal.active{
+     top: 0;
+}
+.login{
+     border: none;
+     outline: none;
+     background-color: #5853B7;
+     color: white;
+     font-weight: 600;
+     font-size: 16px;
+     padding: 10px 25px;
+     border-radius: 10px;
+     cursor: pointer;
+     margin-top: 10px;
+}
+.modal-box{
+     display: flex;
+     justify-content: space-between;
+     background-color: white;
+     width: 900px;
+     height: 500px;
+     border-radius: 15px;
+     position: relative;
+     overflow: hidden;
+}
+.sign-in{
+     position: absolute;
+     left: -500px;
+     text-align: center;
+     margin: 0 auto;
+     margin-top: 90px;
+     transition: all .6s ease-in;
+}
+.sign-in.active{
+     left: 100px;
+}
+.sign-in h1{
+     font-family: sans-serif;
+     font-weight: 600;
+}
+.social{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: 10px;
+     margin: 15px 0px;
+}
+.social a{
+     border: 1px solid rgba(0, 0, 0, 0.238);
+     padding: 8px;
+     font-size: 20px;
+     border-radius: 10px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     color: #5853B7;
+}
+.social a:hover{
+     background-color: rgba(0, 0, 0, 0.373);
+     color: red ;
+}
+.sign-in p{
+     font-size: 14px;
+     font-weight: 300;
+     opacity: .8;
+     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.sign-in form input{
+     width: 300px;
+     height: 40px;
+     border-radius: 10px;
+     border: none;
+     border: 1px solid rgba(0, 0, 0, 0.238);
+     padding: 0px 10px;
+     margin: 10px 0px;
+     outline: none;
+}
+.sign-in-form input.active{
+     animation: input1 .2s linear;
+     background: transparent;
+     border:  2px dashed red;
+}
+
+
+
+
+.sign-up-form input.active{
+     animation: input2 .2s linear;
+     background: transparent;
+     border:  2px dashed red;
+}
+
+
+
+
+.sign-in #password{
+     margin-bottom: 20px;
+}
+.sign-in-btn{
+     background-color: #5853B7;
+     color: white;
+     font-weight: 600;
+     font-size: 16px;
+     padding: 10px 25px;
+     border-radius: 10px;
+     border: none;
+     margin-top: 40px;
+     cursor: pointer;
+}
+
+
+
+.sign-up{
+     position: absolute;
+     right: 100px;
+     text-align: center;
+     margin: 0 auto;
+     margin-top: 85px;
+     transition: all .6s ease-in;
+}
+.sign-up.active{
+     right: -300px;
+}
+
+.sign-up h1{
+     font-family: sans-serif;
+     font-weight: 600;
+}
+.sign-up p{
+     font-size: 14px;
+     font-weight: 300;
+     opacity: .8;
+     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.sign-up form input{
+     width: 300px;
+     height: 40px;
+     border-radius: 10px;
+     border: none;
+     border: 1px solid rgba(0, 0, 0, 0.238);
+     padding: 0px 10px;
+     margin: 10px 0px;
+     outline: none;
+     margin-bottom: 10px;
+}
+.sign-up-btn{
+     background-color: #5853B7;
+     color: white;
+     font-weight: 600;
+     font-size: 16px;
+     padding: 10px 25px;
+     border-radius: 10px;
+     border: none;
+     margin-top: 20px;
+     cursor: pointer;
+}
+
+/* block */
+.modal-block{
+     position: absolute;
+     background-color: #5853B7;
+     border-radius: 10px 40px 40px 10px;
+     width: 450px;
+     height: 501px;
+     left: 300px;
+     display: flex;
+     align-items: center;
+     overflow: hidden;
+     transition: all .5s ease-in-out;
+}
+.modal-block.active{
+     left: 800px;
+     border-radius: 40px 10px 10px 40px;
+}
+.sign-in-block{
+     position: absolute;
+     left: 100px;
+     text-align: center;
+     margin: 0 auto;
+}
+
+.sign-in-block.active{
+     left: -500px;
+}
+.sign-in-block h1{
+     font-family: sans-serif;
+     font-weight: 700;
+     margin-bottom: 5px;
+}
+.sign-in-block p{
+     color: white;
+     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.sign-in-block .sign-in-block-btn{
+     background-color: transparent;
+     color: white;
+     font-weight: 600;
+     font-size: 16px;
+     border: none;
+     border: 1px solid white;
+     padding: 10px 25px;
+     border-radius: 10px;
+     margin-top: 40px;
+     cursor: pointer;
+}
+.sign-in-block .sign-in-block-btn:hover{
+     background-color: white;
+     color: #5853B7;
+}
+
+
+
+
+
+
+.sign-up-block{
+    position: absolute;
+    right: -500px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.modal-block.active .sign-up-block{
+     right: 100px;
+}
+
+.sign-up-block h1{
+     font-family: sans-serif;
+     font-weight: 700;
+     margin-bottom: 5px;
+}
+.sign-up-block p{
+     color: white;
+     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.sign-up-block .sign-up-block-btn{
+     background-color: transparent;
+     color: white;
+     font-weight: 600;
+     font-size: 16px;
+     border: none;
+     border: 1px solid white;
+     padding: 10px 25px;
+     border-radius: 10px;
+     margin-top: 40px;
+     cursor: pointer;
+}
+.sign-up-block .sign-up-block-btn:hover{
+     background-color: white;
+     color: #5853B7;
+}
+
+
+@keyframes input1{
+     0%{
+          transform: translateX(5px) translateY(-3px);
+     }
+     25%{
+          transform: translateX(0px) translateY(0px);
+     }
+     50%{
+          transform: translateX(-5px) translateY(-3px);
+     }
+     100%{
+          transform: translateX(0px) translateY(0px);
+     }
+     
+}
+
+
+@keyframes input2{
+     0%{
+          transform: translateX(5px) translateY(-3px);
+     }
+     25%{
+          transform: translateX(0px) translateY(0px);
+     }
+     50%{
+          transform: translateX(-5px) translateY(-3px);
+     }
+     100%{
+          transform: translateX(0px) translateY(0px);
+     }
+     
+}
